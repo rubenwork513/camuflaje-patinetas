@@ -1,0 +1,13 @@
+---
+const { class: className, imageClass, width, height, alt, src } = Astro.props;
+---
+
+<div class={`card--image ${className && className}`}>
+    <img
+        src={src}
+        height={height}
+        alt={alt}
+        loading="lazy"
+        class={`object-cover aspect-auto h-20 md:h-40 ${imageClass && imageClass}`}
+    />
+</div>

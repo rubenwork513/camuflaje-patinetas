@@ -1,0 +1,49 @@
+---
+import "../styles/globals.scss";
+import SectionContainer from "@/components/SectionContainer.astro";
+import SEO from "@/components/seo/SEO.astro";
+
+const {
+    class: className,
+    title,
+    description,
+    keywords,
+    url,
+    image
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <SEO
+            title={title}
+            description={description}
+            keywords={keywords}
+            url={url}
+            image={image}
+        />
+    </head>
+    <body>
+        <main class={className}>
+            <slot />
+        </main>
+
+        <SectionContainer class="mt-16">
+            <footer class="py-14 bg-purple-100">
+                <div class="wrap-sm mx-auto px-8 grid gap-2">
+                    <h2
+                        class="font-bold text-3xl leading-10 lg:leading-[50px] tracking-tight "
+                    >
+                        Lo mejor de la cocina y el hogar en un solo lugar.
+                    </h2>
+                    <p
+                        class="text-neutral-500 font-medium text-2xl leading-10 tracking-tight lg:tracking-tighter"
+                    >
+                      Descubre los mejores productos de cocina y hogar en nuestra tienda online.
+                    </p>
+                </div>
+            </footer>
+        </SectionContainer>
+    </body>
+</html>

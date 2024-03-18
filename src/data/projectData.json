@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "title": "Olla a presion",
+        "link": "https://articoole.chrstnl.com/",
+        "logo": "/icons/1.jpg",
+        "shortExcerpt": "$599"
+    },
+    {
+        "id": "2",
+        "title": "Olla de acero inoxidable",
+        "link": "https://www.chrstnl.com/",
+        "logo": "/icons/2.jpg",
+        "shortExcerpt": "$499"
+    },
+    {
+        "id": "3",
+        "title": "Juego de sartenes",
+        "link": "https://www.chrstnl.com/",
+        "logo": "/icons/3.jpg",
+        "shortExcerpt": "$399"
+    },
+    {
+        "id": "4",
+        "title": "Olla de presion electrica",
+        "link": "https://astro-nutritrack.chrstnl.com/",
+        "logo": "/icons/4.jpg",
+        "shortExcerpt": "$1399"
+    }
+]
