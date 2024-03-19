@@ -4,12 +4,10 @@ import { SITE } from "@config";
 const {
     title,
     description,
-    url,
 } = Astro.props;
 
 const siteTitle = title ?? SITE.title;
 const metaDescription = description ? description : SITE.desc;
-const siteURL = url ?? SITE.siteUrl;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -25,8 +23,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <meta property="twitter:description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:url" content={siteURL} />
-<meta property="og:site_name" content={siteURL} />
 <meta property="og:title" content={siteTitle} />
 <meta property="og:description" content={metaDescription} />
 
