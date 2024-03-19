@@ -2,49 +2,42 @@
     {
         "id": "1",
         "title": "Patineta NBA naranja",
-        "link": "https://articoole.chrstnl.com/",
         "logo": "/icons/1.webp",
         "shortExcerpt": "$599"
     },
     {
         "id": "2",
         "title": "Patineta buena suerte japonesa",
-        "link": "https://www.chrstnl.com/",
         "logo": "/icons/2.webp",
         "shortExcerpt": "$499"
     },
     {
         "id": "3",
         "title": "Patineta RAP",
-        "link": "https://www.chrstnl.com/",
         "logo": "/icons/3.webp",
         "shortExcerpt": "$399"
     },
     {
         "id": "4",
         "title": "Patineta mexico lindo y querido",
-        "link": "https://astro-nutritrack.chrstnl.com/",
         "logo": "/icons/4.webp",
         "shortExcerpt": "$799"
     },
     {
         "id": "5",
         "title": "Patineta leon azul",
-        "link": "https://astro-nutritrack.chrstnl.com/",
         "logo": "/icons/5.webp",
         "shortExcerpt": "$1799"
     },
     {
         "id": "6",
         "title": "Patineta beautiful",
-        "link": "https://astro-nutritrack.chrstnl.com/",
         "logo": "/icons/6.webp",
         "shortExcerpt": "$1299"
     },
     {
         "id": "7",
         "title": "Patineta tipo surf",
-        "link": "https://astro-nutritrack.chrstnl.com/",
         "logo": "/icons/7.webp",
         "shortExcerpt": "$399"
     }

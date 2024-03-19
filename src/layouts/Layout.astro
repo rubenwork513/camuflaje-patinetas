@@ -7,8 +7,6 @@ const {
     class: className,
     title,
     description,
-    keywords,
-    url,
     image
 } = Astro.props;
 ---
@@ -19,8 +17,6 @@ const {
         <SEO
             title={title}
             description={description}
-            keywords={keywords}
-            url={url}
             image={image}
         />
     </head>
