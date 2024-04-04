@@ -1,37 +1,31 @@
 ---
-import SectionContainer from "@/components/SectionContainer.astro"
-import SEO from "@/components/seo/SEO.astro"
-import "../styles/globals.scss"
+import SEO from "@/components/SEO.astro"
 
-const { class: className, title, description, image } = Astro.props
+const { title, description } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='es'>
   <head>
-    <SEO title={title} description={description} image={image} />
+    <SEO title={title} description={description} />
   </head>
   <body>
-    <main class={className}>
+    <main>
       <slot />
     </main>
 
-    <SectionContainer class='mt-16'>
+    <section class='mt-16'>
       <footer class='py-14 bg-black'>
-        <div class='wrap-sm mx-auto px-8 grid gap-2'>
-          <h2
-            class='font-bold text-3xl leading-10 lg:leading-[50px] tracking-tight text-white-50'
-          >
+        <div class='max-w-4xl mx-auto grid gap-2'>
+          <h2 class='font-bold text-3xl text-white-50'>
             Descubre tu talento en el patinaje
           </h2>
-          <p
-            class='text-neutral-400 font-medium text-2xl leading-10 tracking-tight lg:tracking-tighter'
-          >
+          <p class='text-neutral-400 font-medium text-2xl'>
             Te ayudamos a ser un maestro de las calles en el arte del patinaje,
             nuestros productos son lo mejor para elevar tu nivel
           </p>
         </div>
       </footer>
-    </SectionContainer>
+    </section>
   </body>
 </html>

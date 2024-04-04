@@ -1,68 +1,57 @@
 ---
-import SectionContainer from "@/components/SectionContainer.astro";
-import Card from "@/components/card/Card.astro";
-import CardBody from "@/components/card/CardBody.astro";
-import CardGroup from "@/components/card/CardGroup.astro";
-import CardHeader from "@/components/card/CardHeader.astro";
-import CardImage from "@/components/card/CardImage.astro";
-import projectData from "@/data/projectData.json";
-import Layout from "@/layouts/Layout.astro";
+import Card from "@/components/card/Card.astro"
+import CardBody from "@/components/card/CardBody.astro"
+import CardGroup from "@/components/card/CardGroup.astro"
+import CardHeader from "@/components/card/CardHeader.astro"
+import projectData from "@/data/projectData.json"
+import Layout from "@/layouts/Layout.astro"
 ---
 
-<Layout title="Fabricantes de patinetas" description=".">
-    <div
-        class="main-wrapper wrap-md grid gap-16 px-8 md:px-0 md:gap-16 mx-auto"
-    >
-        <SectionContainer class="hero--container flex flex-col mt-16">
-            <div class="content-container">
-                <div class="page-title--content max-w-[54rem] mb-1">
-                    <h1
-                        class="text-4xl tracking-tight lg:tracking-tighter mb-0 font-bold"
-                    >
-                        Patinetas de Mexico
-                    </h1>
+<Layout title='Fabricantes de patinetas' description='.'>
+  <div class='max-w-4xl grid gap-16 px-8 md:px-0 md:gap-16 mx-auto'>
+    <section class='flex flex-col mt-16'>
+      <div>
+        <div class='max-w-[54rem] mb-1'>
+          <h1 class='text-4xl mb-0 font-bold'>Patinetas de Mexico</h1>
+        </div>
+        <div class='text-2xl font-medium text-neutral-500'>
+          Tenemos a los mejores Fabricantes de patinetas en México, conoce sus
+          productos y adquiere el tuyo obteniendo la mayor calidad del mercado.
+        </div>
+      </div>
+    </section>
+    <!-- Header/Hero Section -->
+    <section>
+      <h2 class='font-medium text-h4 text-neutral-500 mb-4'>
+        Productos recomendados
+      </h2>
+      <CardGroup
+        class='grid scroll-m-24 gap-5 md:grid-cols-3 grid-cols-2 w-full'
+      >
+        {
+          projectData.map((project) => (
+            <Card key={project.id} className='col-span-1'>
+              <CardBody>
+                <div class=' flex flex-col justify-between h-full'>
+                  <img
+                    src={project.logo}
+                    height={180}
+                    alt='Alternative text for photo'
+                    loading='lazy'
+                    class='object-cover aspect-auto'
+                  />
+                  <CardHeader class='md:p-4 p-2'>
+                    {project.title}
+                    <div class='break-words text-base md:text-lg font-medium text-neutral-300 '>
+                      <p>{project.shortExcerpt}</p>
+                    </div>
+                  </CardHeader>
                 </div>
-                <div
-                    class="content text-2xl font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
-                >
-                    Tenemos a los mejores Fabricantes de patinetas en México,
-                    conoce sus productos y adquiere el tuyo obteniendo la mayor
-                    calidad del mercado.
-                </div>
-            </div>
-        </SectionContainer>
-        <!-- Header/Hero Section -->
-        <SectionContainer class="projects--container">
-            <h2
-                class="font-medium text-h4 text-neutral-500 mb-4 leading-8 tracking-tighter"
-            >
-                Productos recomendados
-            </h2>
-            <CardGroup
-                class="grid scroll-m-24 gap-5 md:grid-cols-3 grid-cols-2 w-full"
-            >
-                {
-                    projectData.map((project) => (
-                        <Card key={project.id} className="col-span-1">
-                            <CardBody>
-                                <div class=" flex flex-col justify-between h-full">
-                                    <CardImage
-                                        src={project.logo}
-                                        alt="Alternative text for photo"
-                                        height={180}
-                                    />
-                                    <CardHeader class="md:p-4 p-2">
-                                        {project.title}
-                                        <div class="break-words text-base md:text-lg font-medium text-neutral-300 ">
-                                            <p>{project.shortExcerpt}</p>
-                                        </div>
-                                    </CardHeader>
-                                </div>
-                            </CardBody>
-                        </Card>
-                    ))
-                }
-            </CardGroup>
-        </SectionContainer>
-    </div>
+              </CardBody>
+            </Card>
+          ))
+        }
+      </CardGroup>
+    </section>
+  </div>
 </Layout>
